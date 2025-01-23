@@ -4,16 +4,17 @@
             <h1 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
                 History
             </h1>
-            <x-datetime-picker
-                wire:model.live="date"
-                parse-format="YYYY-MM-DD"
-                label="Date"
-                placeholder="Date"
-                class="w-1/5"
-                without-time
-                without-timezone 
-                display-format="DD/MM/YYYY"
-            />
+            <div class="w-1/5">
+                <x-datetime-picker
+                    wire:model.live="date"
+                    parse-format="YYYY-MM-DD"
+                    label="Date"
+                    placeholder="Date"
+                    without-time
+                    without-timezone 
+                    display-format="DD/MM/YYYY"
+                />
+            </div>
         </div>
         <div class="overflow-hidden ring-1 shadow ring-black/5 sm:rounded-lg">
             <table class="w-full divide-y divide-gray-300">
