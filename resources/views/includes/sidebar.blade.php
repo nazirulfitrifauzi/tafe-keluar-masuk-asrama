@@ -19,12 +19,14 @@
             />
         </ul>
         <ul>
-            <x-sidebar-menu-item 
-                icon="identification" 
-                label="User"
-                route="user"
-                :active="request()->routeIs('user')"
-            />
+            @admin
+                <x-sidebar-menu-item 
+                    icon="identification" 
+                    label="User"
+                    route="user"
+                    :active="request()->routeIs('user')"
+                />
+            @endadmin
 
             <x-sidebar-menu-item 
                 icon="document-duplicate" 
@@ -37,6 +39,13 @@
                 icon="video-camera" 
                 label="Gallery" 
                 route=""
+            />
+
+            <x-sidebar-menu-item 
+                icon="question-mark-circle" 
+                label="Pop Quiz" 
+                route="pop-quiz"
+                :active="request()->routeIs('pop-quiz')"
             />
         </ul>
 

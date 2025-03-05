@@ -21,6 +21,9 @@
         @livewireStyles
         @livewireScripts
 
+        <!-- Confetti.js -->
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>

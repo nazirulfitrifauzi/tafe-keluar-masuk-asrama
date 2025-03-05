@@ -14,6 +14,7 @@ use App\Livewire\History;
 use App\Livewire\Incoming;
 use App\Livewire\Notes;
 use App\Livewire\Outgoing;
+use App\Livewire\PopQuiz;
 use App\Livewire\Record;
 use App\Livewire\Rules;
 use App\Livewire\StudentDetail;
@@ -53,6 +54,8 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard', Dashboard::class)->name('home');
 
     Route::get('user', User::class)->name('user');
+
+    Route::get('pop-quiz', PopQuiz::class)->name('pop-quiz');
 
     Route::get('rules', Rules::class)->name('rules');
 
