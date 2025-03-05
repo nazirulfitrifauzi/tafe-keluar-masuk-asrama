@@ -6,12 +6,12 @@
     'active' => false
 ])
 
-<li class="relative px-6 py-3">
+<li class="relative px-6 py-3 {{ $active ? 'bg-teal-500' : '' }}">
     @if($active)
-        <span class="absolute inset-y-0 left-0 w-1 bg-red-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        <span class="absolute inset-y-0 left-0 w-2 bg-teal-600" aria-hidden="true"></span>
     @endif
     <a
-        class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ $active ? 'text-red-600' : '' }}"
+        class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150  {{ $active ? 'text-white' : 'text-gray-300 hover:text-white' }}"
         href="{{ $route ? route($route) : $href }}"
     >
         @if($icon)

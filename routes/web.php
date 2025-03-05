@@ -12,10 +12,12 @@ use App\Livewire\Auth\Verify;
 use App\Livewire\Dashboard;
 use App\Livewire\History;
 use App\Livewire\Incoming;
+use App\Livewire\Notes;
 use App\Livewire\Outgoing;
 use App\Livewire\Record;
 use App\Livewire\Rules;
 use App\Livewire\StudentDetail;
+use App\Livewire\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,7 +36,7 @@ Route::middleware('guest')->group(function () {
         return auth()->check() ? redirect()->route('home') : redirect()->route('login');
     });
 
-    Route::get('login/{status?}', Login::class)
+    Route::get('login', Login::class)
         ->name('login');
 
     Route::get('register', Register::class)
@@ -47,12 +49,10 @@ Route::get('password/reset', Email::class)
 Route::get('password/reset/{token}', Reset::class)
     ->name('password.reset');
 
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware('auth')->group(function () {
     Route::get('dashboard', Dashboard::class)->name('home');
 
-    Route::get('history', History::class)->name('history');
-
-    Route::get('student-detail', StudentDetail::class)->name('student-detail');
+    Route::get('user', User::class)->name('user');
 
     Route::get('rules', Rules::class)->name('rules');
 
@@ -60,6 +60,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('notes', Notes::class)->name('notes');
+
     Route::get('outgoing/{status?}', Outgoing::class)->name('outgoing');
     Route::get('incoming', Incoming::class)->name('incoming');
 

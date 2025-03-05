@@ -27,6 +27,7 @@
 
     <body>
         <x-dialog z-index="z-50" blur="md" align="center" width="lg" />
+        <x-notifications position="top-right" z-index="z-50" />
         <div class="bg-kolej-tafe"></div>
         @yield('body')
     </body>

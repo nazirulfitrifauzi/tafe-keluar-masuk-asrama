@@ -11,7 +11,7 @@ class Login extends Component
     use WireUiActions;
 
     /** @var string */
-    public $username = '';
+    public $email = '';
 
     /** @var string */
     public $password = '';
@@ -23,14 +23,12 @@ class Login extends Component
     public $status;
 
     protected $rules = [
-        'username' => ['required'],
+        'email' => ['required'],
         'password' => ['required'],
     ];
 
-    public function mount($status = null)
-    {
-        $this->status = $status;
-
+    public function mount()
+    {  
         if (session('success')) {
             $this->dialog()->show([
                 'icon' => 'success',
@@ -40,7 +38,7 @@ class Login extends Component
         }
 
         if (session('error')) {
-            $this->addError('username', session('error'));
+            $this->addError('email', session('error'));
         }
     }
 
@@ -48,15 +46,9 @@ class Login extends Component
     {
         $this->validate();
 
-        if (!Auth::attempt(['username' => $this->username, 'password' => $this->password], $this->remember)) {
-            $this->addError('username', trans('auth.failed'));
+        if (!Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
+            $this->addError('email', trans('auth.failed'));
             return;
-        }
-
-        if ($this->status === 'outgoing') {
-            return redirect()->route('outgoing');
-        } elseif ($this->status === 'incoming') {
-            return redirect()->route('incoming');
         }
 
         return redirect()->intended(route('home'));

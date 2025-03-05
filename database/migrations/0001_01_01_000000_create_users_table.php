@@ -18,10 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone_no');
-            $table->string('course');
             $table->string('ic_no');
-            $table->string('username');
-            $table->string('room_no');
             $table->integer('is_admin')->default(0);
             $table->rememberToken();
             $table->timestamps();
