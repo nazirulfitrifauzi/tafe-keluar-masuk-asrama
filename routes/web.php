@@ -19,6 +19,7 @@ use App\Livewire\Record;
 use App\Livewire\Rules;
 use App\Livewire\StudentDetail;
 use App\Livewire\User;
+use App\Livewire\Gallery;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,6 +57,8 @@ Route::middleware('auth')->group(function () {
     Route::get('user', User::class)->name('user');
 
     Route::get('pop-quiz', PopQuiz::class)->name('pop-quiz');
+
+    Route::get('gallery', Gallery::class)->name('gallery');
 
     Route::get('rules', Rules::class)->name('rules');
 

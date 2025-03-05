@@ -38,7 +38,8 @@
             <x-sidebar-menu-item 
                 icon="video-camera" 
                 label="Gallery" 
-                route=""
+                route="gallery"
+                :active="request()->routeIs('gallery')"
             />
 
             <x-sidebar-menu-item 

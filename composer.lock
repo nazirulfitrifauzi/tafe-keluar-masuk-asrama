@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7cdfebcde31c2fd0cc302910faa0602f",
+    "content-hash": "f738385aa4a048deb6a751a0ae1b4224",
     "packages": [
         {
             "name": "brick/math",
@@ -6073,34 +6073,31 @@
         },
         {
             "name": "wireui/wireui",
-            "version": "v2.2.2",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wireui/wireui.git",
-                "reference": "ae6a1cec8a0eb8027dec3c6868d1f5d7ef3495ad"
+                "reference": "8f2e48638efa66433b4592c455ec553bf4d9c75b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wireui/wireui/zipball/ae6a1cec8a0eb8027dec3c6868d1f5d7ef3495ad",
-                "reference": "ae6a1cec8a0eb8027dec3c6868d1f5d7ef3495ad",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/8f2e48638efa66433b4592c455ec553bf4d9c75b",
+                "reference": "8f2e48638efa66433b4592c455ec553bf4d9c75b",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^10.0|^11.0",
+                "laravel/framework": "^10.0|^11.0|^12.0",
                 "php": "^8.2|^8.3|^8.4",
-                "wireui/heroicons": "^2.6"
+                "wireui/heroicons": "^2.8"
             },
             "require-dev": {
-                "laravel/pint": "^1.16",
-                "livewire/livewire": "^3.5",
-                "mockery/mockery": "^1.6",
-                "orchestra/testbench": "^8.14|^9.0",
-                "orchestra/testbench-dusk": "^8.14|^9.0",
-                "pestphp/pest": "^2.34",
-                "pestphp/pest-plugin-laravel": "^2.4",
-                "pestphp/pest-plugin-livewire": "^2.1",
-                "phpunit/phpunit": "^10.5",
-                "psy/psysh": "^0.12.3"
+                "laravel/pint": "^1.19",
+                "livewire/livewire": "^3.6",
+                "orchestra/testbench": "^10.0",
+                "orchestra/testbench-dusk": "^10.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0",
+                "pestphp/pest-plugin-livewire": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -6123,7 +6120,7 @@
             "authors": [
                 {
                     "name": "Pedro Oliveira",
-                    "email": "pedro@wireui.dev"
+                    "email": "pedrolivertwd@gmail.com"
                 }
             ],
             "description": "TallStack components",
@@ -6136,9 +6133,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wireui/wireui/issues",
-                "source": "https://github.com/wireui/wireui/tree/v2.2.2"
+                "source": "https://github.com/wireui/wireui/tree/v2.3.0"
             },
-            "time": "2025-01-05T02:50:06+00:00"
+            "time": "2025-03-03T00:36:31+00:00"
         }
     ],
     "packages-dev": [
