@@ -138,36 +138,7 @@
             </div>
         @endif
     </div>
-    
-    <!-- Image View Modal -->
-    <x-dialog wire:model="showImageModal" class="bg-black">
-        <div class="flex fixed inset-0 z-50 justify-center items-center">
-            <!-- Close button -->
-            <button 
-                wire:click="closeImageModal"
-                class="absolute top-4 right-4 z-[60] p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
 
-            @if($selectedImage)
-                <div class="flex flex-col items-center w-full h-full">
-                    <div class="relative w-full h-[85vh] flex items-center justify-center">
-                        <img 
-                            src="{{ Storage::url($selectedImage->image_path) }}" 
-                            alt="{{ $selectedImage->name }}" 
-                            class="max-w-[90vw] max-h-[85vh] object-contain"
-                        >
-                    </div>
-                    <div class="py-4 text-lg font-medium text-center text-white">
-                        {{ $selectedImage->name }}
-                    </div>
-                </div>
-            @endif
-        </div>
-    </x-dialog>
 
     <!-- Masonry Layout CSS -->
     <style>

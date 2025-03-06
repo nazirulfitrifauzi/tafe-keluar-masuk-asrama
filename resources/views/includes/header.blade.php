@@ -4,7 +4,7 @@
     >
         <!-- Title -->
         <div class="flex flex-1 lg:mr-32">
-            <p class="text-2xl font-black leading-tight text-white dark:text-gray-200">e-Learning System</p>
+            <p class="text-2xl font-black leading-tight text-white dark:text-gray-200">Welcome to the E-Learning System, {{ Auth::user()->name }}</p>
         </div>
     </div>
 </header>
